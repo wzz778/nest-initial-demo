@@ -5,6 +5,7 @@ import { GetServerSideProps } from "next";
 import { getHomeInfoData } from "@/service/user";
 import { useCallback, useEffect, useState } from "react";
 import { fetchHomeInfoAction } from "@/store/C-demo/requestDemo";
+import { Button } from "antd";
 interface listRoot {
   id: number;
   productId: number;
@@ -51,7 +52,7 @@ export default function Home() {
   }, [getUserCb]);
   return (
     <div style={{ minHeight: "400px", background: "#DADAE5" }}>
-      <button onClick={addNumber}>add2</button>
+      <Button onClick={addNumber}>add2</Button>
       number:{numberDemo}
       <div>
         直接的List:
