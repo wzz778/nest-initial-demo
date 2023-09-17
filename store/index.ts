@@ -9,7 +9,7 @@ const store = configureStore({
     requestDemo: requestDemo,
   },
 });
-const warpper = createWrapper(() => store);
-export default warpper;
+const makeStore = () => store;
+export const wrapper = createWrapper(makeStore);
 export type IAppDispatch = typeof store.dispatch;
 export type IAppState = ReturnType<typeof store.getState>;

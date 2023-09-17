@@ -16,7 +16,7 @@ const numberSlice = createSlice({
     builder.addCase(HYDRATE, (state, action: any) => {
       return {
         ...state, // 当前模块的state
-        ...action.payload.home, // payload:rootSate
+        ...action.payload.numberSlice, // payload:rootSate
       };
     });
   },
