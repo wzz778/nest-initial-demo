@@ -39,7 +39,7 @@ export default function Home() {
     dispatch(increment(2));
   }
   const [bannersList, setBannersList] = useState<listRoot[]>([]);
-  const getUserCb = useCallback(() => getHomeInfoData(), [numberDemo]);
+  const getUserCb = useCallback(() => getHomeInfoData(), []);
   useEffect(() => {
     getUserCb()
       .then((res) => {
