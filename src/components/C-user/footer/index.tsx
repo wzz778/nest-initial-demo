@@ -1,8 +1,8 @@
-import { memo } from "react";
+import { memo } from 'react';
 
 //type
-import type { FC } from "react";
-import styles from "./index.module.scss";
+import type { FC } from 'react';
+import styles from './index.module.scss';
 interface IProps {
   datas?: any[];
 }
@@ -17,4 +17,4 @@ const Footer: FC<IProps> = (props) => {
 };
 
 export default memo(Footer);
-Footer.displayName = "Footer";
+Footer.displayName = 'Footer';

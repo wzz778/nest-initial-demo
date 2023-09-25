@@ -1,6 +1,6 @@
-import { getHomeInfoData } from "@/service/user/index";
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { HYDRATE } from "next-redux-wrapper";
+import { getHomeInfoData } from '@/api/user';
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import { HYDRATE } from 'next-redux-wrapper';
 export interface IHomeInfo {
   banners?: any[];
   categorys?: any[];
@@ -11,28 +11,28 @@ interface IInitialState {
   requestDemoInfo: IHomeInfo;
 }
 const requestSlice = createSlice({
-  name: "requestDemo",
+  name: 'requestDemo',
   initialState: {
-    requestDemoInfo: {},
+    requestDemoInfo: {}
   } as IInitialState,
   reducers: {
     // 默认参数就有类型提示了
     changeNavbarAction(state, action) {
       state.requestDemoInfo = action.payload;
-    },
+    }
   },
   extraReducers: (builder) => {
     builder.addCase(HYDRATE, (state, action: any) => {
       return {
         ...state,
-        ...action.payload.requestDemo, // hydration home模块数据
+        ...action.payload.requestDemo // hydration home模块数据
       };
     });
-  },
+  }
 });
 // 异步的action
 export const fetchHomeInfoAction = createAsyncThunk(
-  "fetchHomeInfoAction",
+  'fetchHomeInfoAction',
   async (payload: number, { dispatch }) => {
     // console.log("payload=>", payload);
     const res = await getHomeInfoData();

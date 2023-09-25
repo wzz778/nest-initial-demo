@@ -1,9 +1,9 @@
-import { memo } from "react";
+import { memo } from 'react';
 // import classNames from "classnames";
 
 //type
-import type { FC } from "react";
-import styles from "./index.module.scss";
+import type { FC } from 'react';
+import styles from './index.module.scss';
 interface IProps {
   datas?: any[];
 }
@@ -18,4 +18,4 @@ const Demo: FC<IProps> = (props) => {
 };
 
 export default memo(Demo);
-Demo.displayName = "Demo";
+Demo.displayName = 'Demo';

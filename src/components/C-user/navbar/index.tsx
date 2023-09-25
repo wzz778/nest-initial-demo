@@ -1,8 +1,8 @@
-import { memo } from "react";
+import { memo } from 'react';
 
 //type
-import type { FC } from "react";
-import styles from "./index.module.scss";
+import type { FC } from 'react';
+import styles from './index.module.scss';
 interface IProps {
   datas?: any[];
 }
@@ -19,4 +19,4 @@ const Navbar: FC<IProps> = (props) => {
 };
 
 export default memo(Navbar);
-Navbar.displayName = "Layout";
+Navbar.displayName = 'Layout';
