@@ -10,7 +10,7 @@
 
 ```javascript
 {
-  "name": "nest-initial-demo",
+  "name": "next-initial-demo",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -329,4 +329,4 @@ import { Button } from "antd";
 
 # Github 地址
 
-[https://github.com/wzz778/nest-initial-demo](https://github.com/wzz778/nest-initial-demo)
+[https://github.com/wzz778/next-initial-demo](https://github.com/wzz778/next-initial-demo)
